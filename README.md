@@ -142,7 +142,7 @@ ince we are dealing with unbalanced data, we use the **F1 score** as the evaluat
 ## 4.  Best Mode selection <a name="bestmodel">
 	
 the best model that performed well was XGBoost with the below scores:
-* On SMOTE Balanced data : Accuracy = 86.86 F1 score = 0.687
+* On SMOTE Balanced data : Accuracy = 86.86 F1 score = 0.867
 * On the initial unbalanced data : Accuracy = 80 F1 score = 0.55
 
 ### a. Fine tuning  <a name="tuning">
