@@ -93,7 +93,7 @@ Ps: we could iterate between the steps depending on our objectives and the resul
   	* App1: One-hot encoding city + Ordinal encoding experience + imputing missing values with the most frequent values
 	* App2: Binary encoding city + Ordinal encoding experience + imputing missing values with the most frequent values
 	* App3: Hashing encoding city + Ordinal encoding experience + imputing missing values with the most frequent values
-	* App4: One-hot encoding city + Ordinal encoding experience + **Replacing missing values with new categori = "missing"**
+	* App4: One-hot encoding city + Ordinal encoding experience + **Replacing missing values with new category = "missing"**
 	* App5: One-hot encoding city + Combined Ordinal encoding experience + imputing missing values with the most frequent values
 	* App6: Binary encoding city + Combined Ordinal encoding experience + imputing missing values with the most frequent values
 	* App7: Hashing encoding city + Combined Ordinal encoding experience + imputing missing values with the most frequent values
