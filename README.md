@@ -117,9 +117,9 @@ ince we are dealing with unbalanced data, we use the **F1 score** as the evaluat
 	XGBoost: UNBALANCED DATA             
 | Approach | Accuracy | F1 score |
 | --- | --- | --- |
-| app 1 | 85.28 | 0.85 |
-| app 2| 85.45 | 0.84 |
-| app 3 | 85.30 | 0.84 |
+| app 1 | 78.91 | 0.48 |
+| app 2| 78.76 | 0.48 |
+| app 3 | 78.91 | 0.49 |
 | app 4| 80 | 0.55 |
 | app 5| 78.76 | 0.48 |
 | app 6| 78.91 | 0.48 |
@@ -131,9 +131,9 @@ ince we are dealing with unbalanced data, we use the **F1 score** as the evaluat
 	XGBoost: SMOTE DATA         
 | Approach | Accuracy | F1 score |
 | --- | --- | --- |
-| app 1 | 78.91 | 0.48 |
-| app 2| 78.76 | 0.48 |
-| app 3 | 78.91 | 0.49 |
+| app 1 | 85.28 | 0.85 |
+| app 2| 85.45 | 0.84 |
+| app 3 | 85.30 | 0.84 |
 | app 4| **86.86** | **0.86** |
 | app 5| 85.78 | 0.85 |
 | app 6| 85.23 | 0.84 |
