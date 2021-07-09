@@ -91,16 +91,16 @@ Ps: we could iterate between the steps depending on our objectives and the resul
   #### List of preprocessing approaches
   We used different pre-processing to deal with missing values, categorical values with high cardinalities and below the list of approaches
   		
-	* App1: Binary encoded city + Combined Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
-	* App2: Binary encoded city + Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
-	* App3: Hashing encoded city + Combined Ordinal encoding experience + imputing missing values with the most frequent value (the mode)
-	* App4: Hashing encoded city + Ordinal encoding experience + imputing missing values with the most frequent value (the mode)
-	* App5: One-hot encoded city + Combined Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
-	* App6: One-hot encoded city + Ordinal encoded experience + **Replacing missing values with new category = "missing" in Gender, Company_size, Company_type**
-	* App7: One-hot encoded city + Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
-	* App8: One-hot Combined (cat with freq <1%) encoded city + Ordinal encoded experience + **Replacing missing values with new category = "missing" in Gender, Company_size, Company_type**
-	* App9: One-hot Combined (cat with freq <1%) encoded city + Combined Ordinal encoded experience + **Replacing missing values with new category = "missing" in Gender, Company_size, Company_type**
-	* App10: One-hot Combined (cat with freq <1%) encoded city + Combined Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
+	* **App 1:** Binary encoded city + Combined Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
+	* **App 2:** Binary encoded city + Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
+	* **App 3:** Hashing encoded city + Combined Ordinal encoding experience + imputing missing values with the most frequent value (the mode)
+	* **App 4:** Hashing encoded city + Ordinal encoding experience + imputing missing values with the most frequent value (the mode)
+	* **App 5:** One-hot encoded city + Combined Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
+	* **App6 :** One-hot encoded city + Ordinal encoded experience + **Replacing missing values with new category = "missing" in Gender, Company_size, Company_type**
+	* **App7 :** One-hot encoded city + Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
+	* **App8 :** One-hot Combined (cat with freq <1%) encoded city + Ordinal encoded experience + **Replacing missing values with new category = "missing" in Gender, Company_size, Company_type**
+	* **App9 :** One-hot Combined (cat with freq <1%) encoded city + Combined Ordinal encoded experience + **Replacing missing values with new category = "missing" in Gender, Company_size, Company_type**
+	* **App10 :** One-hot Combined (cat with freq <1%) encoded city + Combined Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
 	
 
 ### b. Modeling  <a name="modeling">
@@ -120,8 +120,8 @@ ince we are dealing with unbalanced data, we use the **F1 score** as the evaluat
 ### a. Unbalanced Data  <a name="unbalanced">
 
 	XGBoost: UNBALANCED DATA             
-| Approach | Accuracy | F1-score | AUC | Precision (0) | Precision (1) | Recall (0) | Recall (1) | F1-score (0) | F1-score (0) |
-| --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |
+| Approach | Accuracy | F1-score | AUC | Precision 0.0 | Precision 1.0 | Recall 0.0 | Recall 1.0 | F1-score 0.0 | F1-score 1.0 |
+| :-: | :-: | :-: | :-: | :-: | :-: | :-: |  :-: | :-: | :-: |
 | app 1 | 78.81% | 0.486076 | 0.66 | 0.83 | 0.58 | 0.90 | 0.42 | 0.87 | 0.49 |
 | app 2| 78.91% | 0.493734 | 0.66 | 0.83 | 0.58 | 0.90 | 0.43 |  0.87 | 0.49 | 
 | app 3| 78.81% | 0.486076 | 0.66 | 0.83 | 0.58 | 0.90 |  0.42 | 0.87 | 0.49 |
