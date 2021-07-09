@@ -96,11 +96,11 @@ Ps: we could iterate between the steps depending on our objectives and the resul
 	* **App 3:** Hashing encoded city + Combined Ordinal encoding experience + imputing missing values with the most frequent value (the mode)
 	* **App 4:** Hashing encoded city + Ordinal encoding experience + imputing missing values with the most frequent value (the mode)
 	* **App 5:** One-hot encoded city + Combined Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
-	* **App6 :** One-hot encoded city + Ordinal encoded experience + **Replacing missing values with new category = "missing" in Gender, Company_size, Company_type**
-	* **App7 :** One-hot encoded city + Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
-	* **App8 :** One-hot Combined (cat with freq <1%) encoded city + Ordinal encoded experience + **Replacing missing values with new category = "missing" in Gender, Company_size, Company_type**
-	* **App9 :** One-hot Combined (cat with freq <1%) encoded city + Combined Ordinal encoded experience + **Replacing missing values with new category = "missing" in Gender, Company_size, Company_type**
-	* **App10 :** One-hot Combined (cat with freq <1%) encoded city + Combined Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
+	* **App 6:** One-hot encoded city + Ordinal encoded experience + Replacing missing values with new category = "missing" in Gender, Company_size, Company_type
+	* **App 7:** One-hot encoded city + Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
+	* **App 8:** One-hot Combined (cat with freq <1%) encoded city + Ordinal encoded experience + Replacing missing values with new category = "missing" in Gender, Company_size, Company_type
+	* **App 9:** One-hot Combined (cat with freq <1%) encoded city + Combined Ordinal encoded experience + Replacing missing values with new category = "missing" in Gender, Company_size, Company_type
+	* **App 10:** One-hot Combined (cat with freq <1%) encoded city + Combined Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
 	
 
 ### b. Modeling  <a name="modeling">
