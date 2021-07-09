@@ -88,15 +88,20 @@ Ps: we could iterate between the steps depending on our objectives and the resul
   * Drop columns that have more than 20% missing data. Write down the columns.
   * Convert the columns to their correct data type.
   * Encode the categorical variables using the appropriate encoding methodologie.
-  #### List of preprocessing appoach
+  #### List of preprocessing approaches
   We used different pre-processing to deal with missing values, categorical values with high cardinalities and below the list of approaches
-  	* App1: One-hot encoding city + Ordinal encoding experience + imputing missing values with the most frequent values
-	* App2: Binary encoding city + Ordinal encoding experience + imputing missing values with the most frequent values
-	* App3: Hashing encoding city + Ordinal encoding experience + imputing missing values with the most frequent values
-	* App4: One-hot encoding city + Ordinal encoding experience + **Replacing missing values with new category = "missing"**
-	* App5: One-hot encoding city + Combined Ordinal encoding experience + imputing missing values with the most frequent values
-	* App6: Binary encoding city + Combined Ordinal encoding experience + imputing missing values with the most frequent values
-	* App7: Hashing encoding city + Combined Ordinal encoding experience + imputing missing values with the most frequent values
+  		
+	* App1: Binary encoded city + Combined Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
+	* App2: Binary encoded city + Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
+	* App3: Hashing encoded city + Combined Ordinal encoding experience + imputing missing values with the most frequent value (the mode)
+	* App4: Hashing encoded city + Ordinal encoding experience + imputing missing values with the most frequent value (the mode)
+	* App5: One-hot encoded city + Combined Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
+	* App6: One-hot encoded city + Ordinal encoded experience + **Replacing missing values with new category = "missing" in Gender, Company_size, Company_type**
+	* App7: One-hot encoded city + Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
+	* App8: One-hot Combined (cat with freq <1%) encoded city + Ordinal encoded experience + **Replacing missing values with new category = "missing" in Gender, Company_size, Company_type**
+	* App9: One-hot Combined (cat with freq <1%) encoded city + Combined Ordinal encoded experience + **Replacing missing values with new category = "missing" in Gender, Company_size, Company_type**
+	* App10: One-hot Combined (cat with freq <1%) encoded city + Combined Ordinal encoded experience + imputing missing values with the most frequent value (the mode)
+	
 
 ### b. Modeling  <a name="modeling">
    We have used three different models:
@@ -115,15 +120,18 @@ ince we are dealing with unbalanced data, we use the **F1 score** as the evaluat
 ### a. Unbalanced Data  <a name="unbalanced">
 
 	XGBoost: UNBALANCED DATA             
-| Approach | Accuracy | F1 score |
-| --- | --- | --- |
-| app 1 | 78.91 | 0.48 |
-| app 2| 78.76 | 0.48 |
-| app 3 | 78.91 | 0.49 |
-| app 4| 80 | 0.55 |
-| app 5| 78.76 | 0.48 |
-| app 6| 78.91 | 0.48 |
-| app 7| 78.91 | 0.48 |
+| Approach | Accuracy | F1-score | AUC | Precision (0) | Precision (1) | Recall (0) | Recall (1) | F1-score (0) | F1-score (0) |
+| --- | --- | --- | --- | --- | --- | --- |  --- | --- | --- |
+| app 1 | 78.81% | 0.486076 | 0.66 | 0.83 | 0.58 | 0.90 | 0.42 | 0.87 | 0.49 |
+| app 2| 78.91% | 0.493734 | 0.66 | 0.83 | 0.58 | 0.90 | 0.43 |  0.87 | 0.49 | 
+| app 3| 78.81% | 0.486076 | 0.66 | 0.83 | 0.58 | 0.90 |  0.42 | 0.87 | 0.49 |
+| app 4| 79.33% | 0.507463 | 0.67 | 0.84 | 0.59 | 0.90 |  0.45 | 0.87 | 0.51 |
+| app 5| 79.18% | 0.494297 | 0.66 | 0.83 | 0.59 | 0.91 |  0.43 | 0.87 | 0.49 |
+| app 6| 79.49% | 0.547756 | 0.70 | 0.85 | 0.58 | 0.88 |  0.52 | 0.87 | 0.55 |
+| app 7| 79.07% | 0.494325 | 0.66 | 0.83 | 0.59 | 0.90 |  0.43 | 0.87 | 0.49 |
+| app 8| 79.54% | 0.544186 | 0.69 | 0.85 | 0.58 | 0.88 |  0.51 | 0.87 | 0.54 |
+| app 9| 79.38% | 0.505632 | 0.67 | 0.84 | 0.59 | 0.90 |  0.44 | 0.87 | 0.51 |
+| app 10| 79.28% | 0.535673 | 0.69 | 0.85 | 0.58 | 0.88 |  0.50 | 0.87 | 0.54 |
 
 
 ### b. SMOTE Data  <a name="smote">
