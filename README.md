@@ -133,11 +133,11 @@ ince we are dealing with unbalanced data, we use the **F1 score** as the evaluat
 | app 9| 79.38% | 0.505632 | 0.67 | 0.84 | 0.59 | 0.90 |  0.44 | 0.87 | 0.51 |
 | app 10| 79.28% | 0.535673 | 0.69 | 0.85 | 0.58 | 0.88 |  0.50 | 0.87 | 0.54 |
 
-We have two classes we need to identify — appicants that gonna change the company and ones hat wouldnt — with one category (0 – Not looking for job change) representing the overwhelming majority of the data observation.
-We should focus on identifying the positive cases. The metric our intuition tells us we should maximize is known in statistics as **recall**, or the ability of a model to find all the relevant cases within a dataset. The precise definition of recall is (TP) / (TP + FN). 
-* TP: are data point classified as positive by the model that actually are positive (meaning they are correct)
-* FN: are data points the model identifies as negative that actually are positive (incorrect). 
-In our case, TP are correctly identified 1 – Looking for a job change, and FN would be individuals the model labels as  0 – Not looking for job change that actually were looking for a job. Recall can be thought as of a model’s ability to find all the data points of interest in a dataset.
+We have two classes we need to identify — appicants that gonna change the company and those who will not-with — with one category (`0 – Not looking for job change`) representing the overwhelming majority of the data observation.
+We should focus on identifying the **positive cases**. The metric our intuition tells us we should maximize is known in statistics as `**recall**`, or the ability of a model to find all the relevant cases within a dataset. The precise definition of `recall is (TP) / (TP + FN)`. 
+* **TP:** are data point classified as positive by the model that actually are positive (meaning they are correct)
+* **FN:** are data points the model identifies as negative that actually are positive (incorrect). 
+In our case, `TP are correctly identified 1 – Looking for a job change`, and `FN would be individuals the model labels as  0 – Not looking for job change that actually were looking for a job`. Recall can be thought as of a model’s ability to find all the data points of interest in a dataset.
 
 ### b. SMOTE Data  <a name="smote">
   
