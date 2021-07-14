@@ -137,6 +137,7 @@ We have two classes we need to identify — appicants that gonna change the comp
 We should focus on identifying the **positive cases**. The metric our intuition tells us we should maximize is known in statistics as **recall**, or the ability of a model to find all the relevant cases within a dataset. The precise definition of recall is `(TP) / (TP + FN)`. 
 * **TP:** are data point classified as positive by the model that actually are positive (meaning they are correct)
 * **FN:** are data points the model identifies as negative that actually are positive (incorrect). 
+	
 In our case, TP are correctly identified 1 – Looking for a job change, and FN would be individuals the model labels as  0 – Not looking for job change that actually were looking for a job. Recall can be thought as of a model’s ability to find all the data points of interest in a dataset.
 
 ### b. SMOTE Data  <a name="smote">
