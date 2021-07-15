@@ -113,7 +113,24 @@ Ps: we could iterate between the steps depending on our objectives and the resul
    **Note** we tried them all with unbalanced data and with balanced SMOTE data.
 	
 ### c. Evaluation Metrics  <a name="scoring">
-ince we are dealing with unbalanced data, we use the **F1 score** as the evaluation metric most of the time, but we also check the **Accuracy** and the **roc_auc_score** on the test data.
+
+We have two classes we need to identify — appicants that gonna change the company and those who will not — with one category representing the overwhelming majority of the data observations.
+We might focus on identifying the **positive cases**. The metric our intuition tells us we should maximize is known in statistics as **recall**, or the ability of a model to find all the relevant cases within a dataset. The precise definition of recall is `(TP) / (TP + FN)`. 
+* **TP:** are data point classified as positive by the model that actually are positive (meaning they are correct)
+* **FN:** are data points the model identifies as negative that actually are positive (incorrect). 
+	
+In our case, TP are correctly identified 1 – Looking for a job change, and FN would be individuals the model labels as  0 – Not looking for job change that actually were actually looking for a job. Recall can be thought as of a model’s ability to find all the data points of interest in a dataset.
+
+**When we increase the recall**, we decrease the precision and our model would probably not be useful, as we would then have many FNs, i.e., many applicants labeled 1 - Looking for a job change, who were in fact not looking for a job. this model would suffer from low precision, or the ability to identify only relevant data points.
+* **FP:** are data points the model identifies as positive that actually are negative (incorrect). 
+	
+The precise definition of **precision** is `(TP) / (TP + FP)` and it expresses the proportion of the data points our model says was relevant actually were truely relevant.
+
+In some situations, we might know that we want to maximize either recall or precision at the expense of the other metric. However, in our case where we want to find an optimal blend of precision and recall we can combine the two metrics using what is called the **F1 score**.
+
+The F1 score is the harmonic mean of precision and recall taking both metrics into account in the following equation: ![the F1 Score](https://miro.medium.com/max/376/1*UJxVqLnbSj42eRhasKeLOA.png)
+	
+Since we are dealing with unbalanced data, we use the **F1 score** as the evaluation metric most of the time, but we also check the **Accuracy** and the **roc_auc_score** on the test data.
 
 ## 3. Models benchmarking<a name="benchmarking">
 	
@@ -133,12 +150,6 @@ ince we are dealing with unbalanced data, we use the **F1 score** as the evaluat
 | app 9| 79.38% | 0.505632 | 0.67 | 0.84 | 0.59 | 0.90 |  0.44 | 0.87 | 0.51 |
 | app 10| 79.28% | 0.535673 | 0.69 | 0.85 | 0.58 | 0.88 |  0.50 | 0.87 | 0.54 |
 
-We have two classes we need to identify — appicants that gonna change the company and those who will not — with one category representing the overwhelming majority of the data observations.
-We should focus on identifying the **positive cases**. The metric our intuition tells us we should maximize is known in statistics as **recall**, or the ability of a model to find all the relevant cases within a dataset. The precise definition of recall is `(TP) / (TP + FN)`. 
-* **TP:** are data point classified as positive by the model that actually are positive (meaning they are correct)
-* **FN:** are data points the model identifies as negative that actually are positive (incorrect). 
-	
-In our case, TP are correctly identified 1 – Looking for a job change, and FN would be individuals the model labels as  0 – Not looking for job change that actually were looking for a job. Recall can be thought as of a model’s ability to find all the data points of interest in a dataset.
 
 ### b. SMOTE Data  <a name="smote">
   
