@@ -132,7 +132,13 @@ The F1 score is the harmonic mean of precision and recall taking both metrics in
 
 	
 Since we are dealing with unbalanced data, we use the **F1 score** as the evaluation metric most of the time, but we also check the **Accuracy** and the **roc_auc_score** on the test data.
+	
+#### ROC curve: 
+the ROC curve shows how the recall vs precision relationship changes as we vary the threshold for identifying a positive in our model. The threshold represents the value above which a data point is considered in the positive class. Altering this threshold, we can try to achieve the right precision vs recall balance
+<p align="center"> ![the TPR and FPR Score](https://miro.medium.com/max/2000/1*Uh9YUp632ktSd75bZDeB0Q.png)</p>
 
+An ROC curve plots the true positive rate on the y-axis versus the false positive rate on the x-axis. The true positive rate (TPR) is the recall and the false positive rate (FPR) is the probability of a false alarm.
+	
 ## 3. Models benchmarking<a name="benchmarking">
 	
 ### a. Unbalanced Data  <a name="unbalanced">
