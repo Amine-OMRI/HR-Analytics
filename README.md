@@ -165,7 +165,11 @@ ROC curves are appropriate when the observations are balanced between each class
 | app 9| 79.38% | 0.505632 | 0.67 | 0.84 | 0.59 | 0.90 |  0.44 | 0.87 | 0.51 |
 | app 10| 79.28% | 0.535673 | 0.69 | 0.85 | 0.58 | 0.88 |  0.50 | 0.87 | 0.54 |
 
-
+As we can see, the best model is the one using the pre-processing **approach 6**, which consists of 
+* The city One-hot encoded.
+* The experience encoded as ordinal
+* The missing values are replaced with a new category = "missing" in Gender, Company_size, Company_type.
+	
 ### b. SMOTE Data  <a name="smote">
   
 	XGBoost: SMOTE DATA         
