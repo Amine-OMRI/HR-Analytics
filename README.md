@@ -17,6 +17,7 @@ Data science open position challenge in order to lay the foundation for a techni
   * [a. Preprocessing](#preprocessing)
   * [b. Modeling](#modeling)
   * [c. Evaluation Metrics](#scoring)
+  * [d. Observations of Precision and Recall](#observations) 
 * [3. Models benchmarking](#benchmarking)
   * [a. Unbalanced Data](#unbalanced)
   * [b. SMOTE Data](#smote)
@@ -134,7 +135,7 @@ The F1 score is the harmonic mean of precision and recall taking both metrics in
 	
 Since we are dealing with unbalanced data, we use the **F1 score** as the evaluation metric most of the time, but we also check the **Accuracy** and the **roc_auc_score** on the test data.
 	
-### d. Observations of Precision and Recall <a name="Observations">
+### d. Observations of Precision and Recall <a name="observations">
 	
 * **ROC Curves** summarize the trade-off between the true positive rate (**TPR**) and false positive rate (**FPR**) for a predictive model using different probability thresholds. The threshold represents the value above which a data point is considered in the positive class. Altering this threshold, we can try to achieve the right balance between the false positives and false negatives, we can quantify a model’s ROC curve by calculating the total Area Under the Curve (**AUC**), a metric which falls between 0 and 1 with a higher number indicating better classification performance.
 	
