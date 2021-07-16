@@ -134,10 +134,14 @@ The F1 score is the harmonic mean of precision and recall taking both metrics in
 Since we are dealing with unbalanced data, we use the **F1 score** as the evaluation metric most of the time, but we also check the **Accuracy** and the **roc_auc_score** on the test data.
 	
 #### Observations of Precision and Recall: 
-the ROC curve shows how the recall vs precision relationship changes as we vary the threshold for identifying a positive in our model. The threshold represents the value above which a data point is considered in the positive class. Altering this threshold, we can try to achieve the right precision vs recall balance
-<p align="center"> ![the TPR and FPR Score](https://miro.medium.com/max/2000/1*Uh9YUp632ktSd75bZDeB0Q.png)</p>
+	
+* **ROC Curves** summarize the trade-off between the true positive rate (**TPR**) and false positive rate (**FPR**) for a predictive model using different probability thresholds. The threshold represents the value above which a data point is considered in the positive class. Altering this threshold, we can try to achieve the right balance between the false positives and false negatives, we can quantify a model’s ROC curve by calculating the total Area Under the Curve (**AUC**), a metric which falls between 0 and 1 with a higher number indicating better classification performance.
+	<p align="center"> ![the TPR and FPR Score](https://miro.medium.com/max/2000/1*HzWxvbikCtiB-QtFb48WoQ.png)</p>
+	
+* **Precision-Recall curves** summarize the trade-off tradeoff between precision and recall for different threshold. A high area under the curve (**AUC**) represents both high recall and high precision, where high precision relates to a low false positive rate (**FPR**), and high recall relates to a low false negative rate (**FNR**). High scores for both show that the classifier is returning accurate results (high precision), as well as returning a majority of all positive results (high recall).
 
-An ROC curve plots the true positive rate on the y-axis versus the false positive rate on the x-axis. The true positive rate (TPR) is the recall and the false positive rate (FPR) is the probability of a false alarm.
+ROC curves are appropriate when the observations are balanced between each class, whereas precision-recall curves are appropriate for imbalanced datasets.The focus on the minority class makes it an effective diagnostic for imbalanced binary classification models.
+	
 	
 ## 3. Models benchmarking<a name="benchmarking">
 	
