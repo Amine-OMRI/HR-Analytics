@@ -152,7 +152,7 @@ ROC curves are appropriate when the observations are balanced between each class
 ### a. Unbalanced Data  <a name="unbalanced">
 
 	XGBoost: UNBALANCED DATA             
-| Approach | Accuracy | F1-score | AUC | Precision 1.0 | Recall 1.0 |
+| Approach | Accuracy | F1-score | AUC | Precision | Recall |
 | :-: | :-: | :-: | :-: | :-: | :-: | 
 | app 1 | 78.81% | 0.486076 | 0.66 | 0.58 | 0.42 |
 | app 2| 78.91% | 0.493734 | 0.66 | 0.58 | 0.43 |  
