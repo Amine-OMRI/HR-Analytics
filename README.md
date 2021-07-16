@@ -128,16 +128,19 @@ The precise definition of **precision** is `(TP) / (TP + FP)` and it expresses t
 
 In some situations, we might know that we want to maximize either recall or precision at the expense of the other metric. However, in our case where we want to find an optimal blend of precision and recall we can combine the two metrics using what is called the **F1 score**.
 
-The F1 score is the harmonic mean of precision and recall taking both metrics into account in the following equation:<p align="center"> ![the F1 Score](https://miro.medium.com/max/376/1*UJxVqLnbSj42eRhasKeLOA.png)</p>
+The F1 score is the harmonic mean of precision and recall taking both metrics into account in the following equation: 
+	`F1 = 2 * (precision * recall) / (precision + recall)`
 
 	
 Since we are dealing with unbalanced data, we use the **F1 score** as the evaluation metric most of the time, but we also check the **Accuracy** and the **roc_auc_score** on the test data.
 	
-#### Observations of Precision and Recall: 
+### d. Observations of Precision and Recall <a name="Observations">
 	
 * **ROC Curves** summarize the trade-off between the true positive rate (**TPR**) and false positive rate (**FPR**) for a predictive model using different probability thresholds. The threshold represents the value above which a data point is considered in the positive class. Altering this threshold, we can try to achieve the right balance between the false positives and false negatives, we can quantify a model’s ROC curve by calculating the total Area Under the Curve (**AUC**), a metric which falls between 0 and 1 with a higher number indicating better classification performance.
-	<p align="center"> ![the TPR and FPR Score](https://miro.medium.com/max/2000/1*HzWxvbikCtiB-QtFb48WoQ.png)</p>
-	
+	`True positive rate (TPR) = TP / (TP + FP) == Reall == Sensitivity`
+	`False positive rate (FPR) = FP / (FP + TN) == 1- Specifity`
+	`Specificity = True Negatives / (True Negatives + False Positives)`
+
 * **Precision-Recall curves** summarize the trade-off tradeoff between precision and recall for different threshold. A high area under the curve (**AUC**) represents both high recall and high precision, where high precision relates to a low false positive rate (**FPs**), and high recall relates to a low false negative rate (**FNs**). High scores for both show that the classifier is returning accurate results (high precision), as well as returning a majority of all positive results (high recall).
 
 ROC curves are appropriate when the observations are balanced between each class, whereas precision-recall curves are appropriate for imbalanced datasets.The focus on the minority class makes it an effective diagnostic for imbalanced binary classification models.
