@@ -128,7 +128,7 @@ The precise definition of **precision** is `(TP) / (TP + FP)` and it expresses t
 
 In some situations, we might know that we want to maximize either recall or precision at the expense of the other metric. However, in our case where we want to find an optimal blend of precision and recall we can combine the two metrics using what is called the **F1 score**.
 
-The F1 score is the harmonic mean of precision and recall taking both metrics into account in the following equation: 
+The F1 score is the harmonic mean of precision and recall taking both metrics into account in the following equation:</br> 
 	`F1 = 2 * (precision * recall) / (precision + recall)`
 
 	
@@ -137,9 +137,10 @@ Since we are dealing with unbalanced data, we use the **F1 score** as the evalua
 ### d. Observations of Precision and Recall <a name="Observations">
 	
 * **ROC Curves** summarize the trade-off between the true positive rate (**TPR**) and false positive rate (**FPR**) for a predictive model using different probability thresholds. The threshold represents the value above which a data point is considered in the positive class. Altering this threshold, we can try to achieve the right balance between the false positives and false negatives, we can quantify a model’s ROC curve by calculating the total Area Under the Curve (**AUC**), a metric which falls between 0 and 1 with a higher number indicating better classification performance.
-	`True positive rate (TPR) = TP / (TP + FP) == Reall == Sensitivity`
-	`False positive rate (FPR) = FP / (FP + TN) == 1- Specifity`
-	`Specificity = True Negatives / (True Negatives + False Positives)`
+	
+	`True positive rate (TPR) = TP / (TP + FP) == Reall == Sensitivity`</br>
+	`False positive rate (FPR) = FP / (FP + TN) == 1- Specifity`</br>
+	`Specificity = True Negatives / (True Negatives + False Positives)`</br>
 
 * **Precision-Recall curves** summarize the trade-off tradeoff between precision and recall for different threshold. A high area under the curve (**AUC**) represents both high recall and high precision, where high precision relates to a low false positive rate (**FPs**), and high recall relates to a low false negative rate (**FNs**). High scores for both show that the classifier is returning accurate results (high precision), as well as returning a majority of all positive results (high recall).
 
