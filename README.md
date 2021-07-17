@@ -152,35 +152,33 @@ ROC curves are appropriate when the observations are balanced between each class
 ### a. Unbalanced Data  <a name="unbalanced">
 
 	XGBoost: UNBALANCED DATA             
-	| Approach | Accuracy | F1-score | AUC | Precision | Recall |
-	| :-: | :-: | :-: | :-: | :-: | :-: | 
-	| app 1 | 78.81% | 0.486076 | 0.66 | 0.58 | 0.42 |
-	| app 2| 78.91% | 0.493734 | 0.66 | 0.58 | 0.43 |  
-	| app 3| 78.81% | 0.486076 | 0.66 | 0.58 | 0.42 |  
-	| app 4| 79.33% | 0.507463 | 0.67 | 0.59 | 0.45 |  
-	| app 5| 79.18% | 0.494297 | 0.66 | 0.59 | 0.43 | 
-	| app 6| 79.96% | 0.552448 | 0.70 | 0.59 | 0.52 | 
-	| app 7| 79.07% | 0.494325 | 0.66 | 0.59 | 0.43 |  
-	| app 8| 79.54% | 0.544186 | 0.69 | 0.58 | 0.51 |  
-	| app 9| 79.38% | 0.505632 | 0.67 | 0.59 | 0.44 |  
-	| app 10| 79.28% | 0.535673 | 0.69 | 0.58 | 0.50 |
+| Approach | Accuracy | F1-score | AUC | Precision | Recall |
+| :-: | :-: | :-: | :-: | :-: | :-: | 
+| app 1 | 78.81% | 0.486076 | 0.66 | 0.58 | 0.42 |
+| app 2| 78.91% | 0.493734 | 0.66 | 0.58 | 0.43 |  
+| app 3| 78.81% | 0.486076 | 0.66 | 0.58 | 0.42 |  
+| app 4| 79.33% | 0.507463 | 0.67 | 0.59 | 0.45 |  
+| app 5| 79.18% | 0.494297 | 0.66 | 0.59 | 0.43 | 
+| app 6| 79.96% | 0.552448 | 0.70 | 0.59 | 0.52 | 
+| app 7| 79.07% | 0.494325 | 0.66 | 0.59 | 0.43 |  
+| app 8| 79.54% | 0.544186 | 0.69 | 0.58 | 0.51 |  
+| app 9| 79.38% | 0.505632 | 0.67 | 0.59 | 0.44 |  
+| app 10| 79.28% | 0.535673 | 0.69 | 0.58 | 0.50 |
 
 As we can see, the best model is the one using the pre-processing **approach 6**, which consists of 
 * The city One-hot encoded.
 * The experience encoded as ordinal
-* The missing values are replaced with a new category = "missing" in Gender, Company_size, Company_type.
-
-With the below scores:
+* The missing values are replaced with a new category = "missing" in Gender, Company_size, Company_type, with the below scores:
 | Accuracy | F1 score | AUC score |
 | :-: | :-: | :-: | 
 | 79.96% | 0.552448 | 0.70 |
 	
 Trainging with the best params and the best approache wich is the 6'th
-eta: 0.05
+`eta: 0.05
 subsample = 0.7
 colsample_bytree = 0.7
 max_depth = 8
-min_child_weight = 7
+min_child_weight = 7`
 | Accuracy | F1 score | AUC score |
 | :-: | :-: | :-: | 
 | 80.69% | 0.575688 | 0.71 |
@@ -208,11 +206,11 @@ As we can see again, the best model is the one using the pre-processing  **appro
 | 86.76% | 0.865228 | 0.86 |
 	
 Trainging with the best params and the best approache wich is the 6'th
-eta: 0.1
+`eta: 0.1
 subsample = 0.8
 colsample_bytree = 0.4
 max_depth = 8
-min_child_weight = 6
+min_child_weight = 6`
 | Accuracy | F1 score | AUC score |
 | :-: | :-: | :-: | 
 | 87.14% | 0.868515 | 0.87 |
