@@ -152,18 +152,18 @@ ROC curves are appropriate when the observations are balanced between each class
 ### a. Unbalanced Data  <a name="unbalanced">
 
 	XGBoost: UNBALANCED DATA             
-| Approach | Accuracy | F1-score | AUC | Precision | Recall |
-| :-: | :-: | :-: | :-: | :-: | :-: | 
-| app 1 | 78.81% | 0.486076 | 0.66 | 0.58 | 0.42 |
-| app 2| 78.91% | 0.493734 | 0.66 | 0.58 | 0.43 |  
-| app 3| 78.81% | 0.486076 | 0.66 | 0.58 | 0.42 |  
-| app 4| 79.33% | 0.507463 | 0.67 | 0.59 | 0.45 |  
-| app 5| 79.18% | 0.494297 | 0.66 | 0.59 | 0.43 | 
-| app 6| 79.96% | 0.552448 | 0.70 | 0.59 | 0.52 | 
-| app 7| 79.07% | 0.494325 | 0.66 | 0.59 | 0.43 |  
-| app 8| 79.54% | 0.544186 | 0.69 | 0.58 | 0.51 |  
-| app 9| 79.38% | 0.505632 | 0.67 | 0.59 | 0.44 |  
-| app 10| 79.28% | 0.535673 | 0.69 | 0.58 | 0.50 |
+	| Approach | Accuracy | F1-score | AUC | Precision | Recall |
+	| :-: | :-: | :-: | :-: | :-: | :-: | 
+	| app 1 | 78.81% | 0.486076 | 0.66 | 0.58 | 0.42 |
+	| app 2| 78.91% | 0.493734 | 0.66 | 0.58 | 0.43 |  
+	| app 3| 78.81% | 0.486076 | 0.66 | 0.58 | 0.42 |  
+	| app 4| 79.33% | 0.507463 | 0.67 | 0.59 | 0.45 |  
+	| app 5| 79.18% | 0.494297 | 0.66 | 0.59 | 0.43 | 
+	| app 6| 79.96% | 0.552448 | 0.70 | 0.59 | 0.52 | 
+	| app 7| 79.07% | 0.494325 | 0.66 | 0.59 | 0.43 |  
+	| app 8| 79.54% | 0.544186 | 0.69 | 0.58 | 0.51 |  
+	| app 9| 79.38% | 0.505632 | 0.67 | 0.59 | 0.44 |  
+	| app 10| 79.28% | 0.535673 | 0.69 | 0.58 | 0.50 |
 
 As we can see, the best model is the one using the pre-processing **approach 6**, which consists of 
 * The city One-hot encoded.
