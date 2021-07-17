@@ -173,7 +173,7 @@ As we can see, the best model is the one using the pre-processing **approach 6**
 With the below scores:
 | Accuracy | F1 score | AUC score |
 | :-: | :-: | :-: | 
-| 80.06% | 0.558891 | 0.70 |
+| 79.96% | 0.552448 | 0.70 |
 	
 Trainging with the best params and the best approache wich is the 6'th
 eta: 0.05
