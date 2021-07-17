@@ -159,7 +159,7 @@ ROC curves are appropriate when the observations are balanced between each class
 | app 3| 78.81% | 0.486076 | 0.66 | 0.58 | 0.42 |  
 | app 4| 79.33% | 0.507463 | 0.67 | 0.59 | 0.45 |  
 | app 5| 79.18% | 0.494297 | 0.66 | 0.59 | 0.43 | 
-| app 6| 79.49% | 0.547756 | 0.70 | 0.58 | 0.52 | 
+| app 6| 79.96% | 0.552448 | 0.70 | 0.59 | 0.52 | 
 | app 7| 79.07% | 0.494325 | 0.66 | 0.59 | 0.43 |  
 | app 8| 79.54% | 0.544186 | 0.69 | 0.58 | 0.51 |  
 | app 9| 79.38% | 0.505632 | 0.67 | 0.59 | 0.44 |  
@@ -169,26 +169,59 @@ As we can see, the best model is the one using the pre-processing **approach 6**
 * The city One-hot encoded.
 * The experience encoded as ordinal
 * The missing values are replaced with a new category = "missing" in Gender, Company_size, Company_type.
+
+With the below scores:
+| Accuracy | F1 score | AUC score |
+| :-: | :-: | :-: | 
+| 80.06% | 0.558891 | 0.70 |
+	
+Trainging with the best params and the best approache wich is the 6'th
+eta: 0.05
+subsample = 0.7
+colsample_bytree = 0.7
+max_depth = 8
+min_child_weight = 7
+| Accuracy | F1 score | AUC score |
+| :-: | :-: | :-: | 
+| 80.69% | 0.575688 | 0.71 |
+	
 	
 ### b. SMOTE Data  <a name="smote">
   
-	XGBoost: SMOTE DATA         
-| Approach | Accuracy | F1 score |
-| --- | --- | --- |
-| app 1 | 85.28 | 0.85 |
-| app 2| 85.45 | 0.84 |
-| app 3 | 85.30 | 0.84 |
-| app 4| **86.86** | **0.86** |
-| app 5| 85.78 | 0.85 |
-| app 6| 85.23 | 0.84 |
-| app 7| 85.23 | 0.84 |
+	XGBoost: SMOTE Balanced DATA         
+| Approach | Accuracy | F1-score | AUC | Precision | Recall |
+| :-: | :-: | :-: | :-: | :-: | :-: | 
+| app 1 | 85.30% | 0.845225 | 0.85 | 0.89 | 0.80 |
+| app 2| 85.78% | 0.850348 | 0.85 | 0.90 | 0.81 |  
+| app 3| 85.30% | 0.845225 | 0.85 | 0.89 | 0.80 |  
+| app 4| 85.78% | 0.850348 | 0.85 | 0.90 | 0.81 |  
+| app 5| 85.78% | 0.850348 | 0.85 | 0.90 | 0.81 | 
+| app 6| 86.76% | 0.865228 | 0.86 | 0.88 | 0.85 | 
+| app 7| 85.58% | 0.848816 | 0.85 | 0.89 | 0.81 |  
+| app 8| 86.79% | 0.864672 | 0.86 | 0.89 | 0.84 |  
+| app 9| 85.71% | 0.849064 | 0.85 | 0.90 | 0.80 |  
+| app 10| 86.13% | 0.857855 | 0.86 | 0.88 | 0.84 |
+	
+As we can see again, the best model is the one using the pre-processing  **approach 6** with the below scores:
+| Accuracy | F1 score | AUC score |
+| :-: | :-: | :-: | 
+| 86.76% | 0.865228 | 0.86 |
+	
+Trainging with the best params and the best approache wich is the 6'th
+eta: 0.1
+subsample = 0.8
+colsample_bytree = 0.4
+max_depth = 8
+min_child_weight = 6
+| Accuracy | F1 score | AUC score |
+| :-: | :-: | :-: | 
+| 87.14% | 0.868515 | 0.87 |
 	
 ## 4.  Best Mode selection <a name="bestmodel">
 	
 the best model that performed well was XGBoost with the below scores:
-* On SMOTE Balanced data : Accuracy = 86.86 F1 score = 0.867
-* On the initial unbalanced data : Accuracy = 80 F1 score = 0.55
-
+* On SMOTE Balanced data : Accuracy = 80.06 F1 score = 0.558891
+	
 ### a. Fine tuning  <a name="tuning">
 	
 The best parameters of our model after Fine Tuning are the following:
