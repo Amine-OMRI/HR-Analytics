@@ -156,7 +156,7 @@ ROC curves are appropriate when the observations are balanced between each class
 	
 ### a. XGBoost  <a name="XGBoost">
 
-	XGBoost: UNBALANCED DATA             
+	XGBoost: IMBALANCED DATA             
 | Approach | Accuracy | F1-score | AUC | Precision | Recall |
 | :-: | :-: | :-: | :-: | :-: | :-: | 
 | app 1 | 78.81% | 0.486076 | 0.66 | 0.58 | 0.42 |
@@ -173,10 +173,7 @@ ROC curves are appropriate when the observations are balanced between each class
 As we can see, the best model is the one using the pre-processing **approach 6**, which consists of 
 * The city One-hot encoded.
 * The experience encoded as ordinal
-* The missing values are replaced with a new category = "missing" in Gender, Company_size, Company_type, with the below scores:
-| Accuracy | F1 score | AUC score |
-| :-: | :-: | :-: | 
-| 79.96% | 0.552448 | 0.70 |
+* The missing values are replaced with a new category = "missing" in Gender, Company_size, Company_type, with the below scores: Accuracy = 79.96%, F1 score = 0.552448 and AUC score = 0.70
 	
 Trainging with the best params and the best approache wich is the 6'th
 `eta: 0.05
@@ -205,10 +202,7 @@ min_child_weight = 7`
 | app 9| 85.71% | 0.849064 | 0.85 | 0.90 | 0.80 |  
 | app 10| 86.13% | 0.857855 | 0.86 | 0.88 | 0.84 |
 	
-As we can see again, the best model is the one using the pre-processing  **approach 6** with the below scores:
-| Accuracy | F1 score | AUC score |
-| :-: | :-: | :-: | 
-| 86.76% | 0.865228 | 0.86 |
+As we can see again, the best model is the one using the pre-processing  **approach 6** with the below scores: Accuracy= 86.76%, F1= 0.865228 score and AUC = 0.86 
 	
 Trainging with the best params and the best approache wich is the 6'th
 `eta: 0.1
