@@ -19,8 +19,9 @@ Data science open position challenge in order to lay the foundation for a techni
   * [c. Evaluation Metrics](#scoring)
   * [d. Observations of Precision and Recall](#observations) 
 * [3. Models benchmarking](#benchmarking)
-  * [a. Unbalanced Data](#unbalanced)
-  * [b. SMOTE Data](#smote)
+  * [a. XGBoost](#XGBoost)
+  * [b. Linear SVM](#SVM)
+  * [c. CatBoostRegressor](#CatBoostRegressor)
 * [4. Best Mode selection](#bestmodel)
   * [a. Fine tuning](#tuning)
   * [b. Scores](#scores)
@@ -153,7 +154,7 @@ ROC curves are appropriate when the observations are balanced between each class
 	
 ## 3. Models benchmarking<a name="benchmarking">
 	
-### a. Unbalanced Data  <a name="unbalanced">
+### a. XGBoost  <a name="XGBoost">
 
 	XGBoost: UNBALANCED DATA             
 | Approach | Accuracy | F1-score | AUC | Precision | Recall |
@@ -218,7 +219,31 @@ min_child_weight = 6`
 | Accuracy | F1 score | AUC score |
 | :-: | :-: | :-: | 
 | 87.14% | 0.868515 | 0.87 |
+
+### b. Linear SVM  <a name="SVM">
 	
+	Linear SVM: imalanced DATA        
+| Approach | Accuracy | F1-score | AUC | Precision | Recall |
+| :-: | :-: | :-: | :-: | :-: | :-: | 
+| app 6 | 76.10% | 0.076613 | 0.51 | 0.50 | 0.04 |
+
+	Linear SVM: SMOTE Balanced DATA        
+| Approach | Accuracy | F1-score | AUC | Precision | Recall |
+| :-: | :-: | :-: | :-: | :-: | :-: | 
+| app 6 | 76.40% | 0.754253 | 0.76 | 0.79 | 0.73 |
+	
+### c. CatBoostRegressor <a name="CatBoostRegressor">
+
+	CatBoostRegressor: imalanced DATA        
+| Approach | Accuracy | F1-score | AUC | Precision | Recall |
+| :-: | :-: | :-: | :-: | :-: | :-: | 
+| app 6 | 80.11% | 0.572391 | 0.71 | 0.59 | 0.59 |
+	
+	CatBoostRegressor: SMOTE Balanced DATA        
+| Approach | Accuracy | F1-score | AUC | Precision | Recall |
+| :-: | :-: | :-: | :-: | :-: | :-: | 
+| app 6 | 86.69% | 0.864998 | 0.86 | 0.88 | 0.85 |
+
 ## 4.  Best Mode selection <a name="bestmodel">
 	
 the best model that performed well was XGBoost with the below scores:
