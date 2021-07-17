@@ -109,10 +109,14 @@ Ps: we could iterate between the steps depending on our objectives and the resul
    * XGBoost (**OUR BEST MODEL**): Boosting is an ensembling technique where new models are added to correct errors made by existing models. Models are added sequentially until no further improvements can be made. A popular example is the AdaBoost algorithm that weights data points that are difficult to predict.
 	Gradient boosting is an approach that creates new models that predict the residuals or errors of the previous models, then adds them together to get the final prediction. It is called "gradient boosting" because it uses a gradient descent algorithm to minimize the loss when adding new models.
 	XGBoost (eXtreme Gradient Boosting) is a gradient boosted decision tree implementation designed for speed and performance. It is a very popular algorithm that has recently dominated applied machine learning for structured or tabular data
-   * Linear SVM
-   * CatBoostRegressor
-   **Note** we tried them all with unbalanced data and with balanced SMOTE data.
+   * Linear SVM: SVM or Support Vector Machine is a linear model for classification and regression problems. It can solve linear and non-linear problems and work well for many practical problems. The idea of SVM is simple: The algorithm creates a line or a hyperplane which separates the data into classes.
+C is an hyperparameter that adds a penalty for each misclassified data point. If c is small, the penalty for misclassified points is low so a decision boundary with a large margin is chosen at the expense of a greater number of misclassifications.
 	
+   * CatBoostRegressor:
+CatBoost builds upon the theory of decision trees and gradient boosting. The main idea of boosting is to sequentially combine many weak models (a model performing slightly better than random chance) and thus through greedy search create a strong competitive predictive model. Because gradient boosting fits the decision trees sequentially, the fitted trees will learn from the mistakes of former trees and hence reduce the errors. This process of adding a new function to existing ones is continued until the selected loss function is no longer minimized.
+	
+   **Note** we tried them all with unbalanced data and with balanced SMOTE data.
+
 ### c. Evaluation Metrics  <a name="scoring">
 
 We have two classes we need to identify — appicants that gonna change the company and those who will not — with one category representing the overwhelming majority of the data observations.
