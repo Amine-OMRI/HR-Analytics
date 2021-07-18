@@ -27,6 +27,7 @@ Data science open position challenge in order to lay the foundation for a techni
   * [a. Fine tuning](#tuning)
   * [b. Scores](#scores)
   * [c. Interpretation](#Interpretation)
+  * [d. Feature Importance](#FeatureImportance)
 * [5. Submission](#submission)
 	
 ## 0. Modules and versions <a name="modules">
@@ -281,8 +282,8 @@ The best parameters of our model after Fine Tuning are the following:
 * minimum_child_weight = 5
 	
 ### b. Scores  <a name="scores">
-Accuracy: 86.86%
-F1 score: 0.867740
+Accuracy: 87.14%
+F1 score: 0.868515
 | --- | precision | recall | f1-score | support|
 | --- | --- | --- | --- | --- |
 | 0.0 | 0.86 | 0.88 | 0.87 | 1440 |
@@ -292,7 +293,30 @@ F1 score: 0.867740
 | weighted avg | 0.87 | 0.87 | 0.87 | 2877 |
             
 ### c. Interpretation <a name="Interpretation">
+	
+* Looking at the confusion matrix, we see that our model did fairly well. In particular, our model misclassified only 12% of individuals not looking for work, and 14% of individuals that are looking for work.
 
+* In particular, our precision score was 0.88%, which means that "When our model predicted someone to be Looking for Work, it was accurate 88% of the time". In the narrative that we are using this model to help better allocate the time of our recruiters, having a 88% chance that every candidate the recruiter is talking to is looking for a job, can be a huge time saver. This is compared to not using the model and having only a very low chance of reaching out to someone at random and them currently looking for work.
+
+* In addition, we can look at the recall score. At 86%, this means that "When an individual was looking for work, our model accurately classified them 86% of the time." This is also an important metric for the above business situation. In particular, we would want to minimize our False Negatives, aka: when our model inaccurately predicts someone who is looking for work.
+
+All together, we can look at the f1 score of 86% because our business case revolves around maximizing both precision and recall.
+            
+### d. Feature Importance <a name="FeatureImportance">
+	
+In addition to its superior performance, the use of decision tree method sets such as gradient boosting has the advantage of being able to automatically provide estimates of feature importance from a trained predictive model.
+
+In general, importance provides a score that indicates the usefulness or value of each feature in building boosted decision trees within the model. The more a feature is used to make key decisions with the decision trees, the higher its relative importance.
+
+This importance is computed explicitly for each feature in the dataset, allowing features to be ranked and compared with each other.
+
+* Interestingly, it looks like the `code_city_21`, `code_city_103`, `code_city_16`,  `company_type`, `education_level`, `code_city_114`, `city_development_index`, `enrolled_university`,  `relevent_experience` and `company_size` are the most impactful when making this prediction, it will be so helpful to take a quick look at the plot:
+<p align="center">
+  <img src="https://github.com/Amine-OMRI/HR-Analytics/blob/data_preprocessing/Best_Model_XGBoost_Feature_Importance.png"/>
+</p>
+	
+* As we can see, this assumes that looking for work tends to be a factor of location as well as things related to your current job (university, experience, company type, company size, etc). In addition,people in cities `code_city_21`, `code_city_103`, `code_city_16` are much more likely to be seeking a new job.
+	
 ## 5. Submission  <a name="submission">
 Thank you for taking the time to learn more about the solution we have implemented, we appreciate your feedback. 
 Here is the link to the CSV [file](https://github.com/Amine-OMRI/HR-Analytics/blob/main/Submission/submission_01.csv) of the submission.
