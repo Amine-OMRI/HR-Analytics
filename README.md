@@ -155,8 +155,14 @@ Since we are dealing with unbalanced data, we use the **F1 score** as the evalua
 	`True positive rate (TPR) = TP / (TP + FP) == Recall == Sensitivity`</br>
 	`False positive rate (FPR) = FP / (FP + TN) == 1 - Specifity`</br>
 	`Specificity = True Negatives / (True Negatives + False Positives)`</br>
+<p align="center">
+  <img src="https://github.com/Amine-OMRI/HR-Analytics/blob/data_preprocessing/Best_Model_XGBoost_App6_ROC_Curve.png"/>
+</p>
 
 * **Precision-Recall curves** summarize the trade-off tradeoff between precision and recall for different threshold. A high area under the curve (**AUC**) represents both high recall and high precision, where high precision relates to a low false positive rate (**FPs**), and high recall relates to a low false negative rate (**FNs**). High scores for both show that the classifier is returning accurate results (high precision), as well as returning a majority of all positive results (high recall).
+<p align="center">
+  <img src="https://github.com/Amine-OMRI/HR-Analytics/blob/data_preprocessing/Best_Model_XGBoost_App6_PR_Curve.png"/>
+</p>
 
 ROC curves are appropriate when the observations are balanced between each class, whereas precision-recall curves are appropriate for imbalanced datasets.The focus on the minority class makes it an effective diagnostic for imbalanced binary classification models.
 	
