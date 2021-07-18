@@ -117,7 +117,7 @@ C is an hyperparameter that adds a penalty for each misclassified data point. If
    * CatBoostRegressor:
 CatBoost builds upon the theory of decision trees and gradient boosting. The main idea of boosting is to sequentially combine many weak models (a model performing slightly better than random chance) and thus through greedy search create a strong competitive predictive model. Because gradient boosting fits the decision trees sequentially, the fitted trees will learn from the mistakes of former trees and hence reduce the errors. This process of adding a new function to existing ones is continued until the selected loss function is no longer minimized.
 
-   * ## LGBMClassifier
+   * LGBMClassifier
 LightGBM is a gradient boosting framework that uses tree based learning algorithms. It is designed to be distributed and efficient with the following advantages:
 	* Faster training speed and higher efficiency.
 	* Lower memory usage.
@@ -268,16 +268,16 @@ min_child_weight = 6`
 ## 4.  Best Mode selection <a name="bestmodel">
 	
 the best model that performed well was XGBoost with the below scores:
-* On SMOTE Balanced data : Accuracy = 80.06 F1 score = 0.558891
+* On SMOTE Balanced data : Accuracy = 87.14%, F1 score = 0.868515 and AUC = 0.87 
 	
 ### a. Fine tuning  <a name="tuning">
 	
 The best parameters of our model after Fine Tuning are the following:
 * eta : 0.1
 * subsample = 1.0
-* colsample_bytree = 0.4
-* max_depth = 8
-* minimum_child_weight = 6
+* colsample_bytree = 0.7
+* max_depth = 11
+* minimum_child_weight = 5
 	
 ### b. Scores  <a name="scores">
 Accuracy: 86.86%
