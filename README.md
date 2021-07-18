@@ -26,6 +26,7 @@ Data science open position challenge in order to lay the foundation for a techni
 * [4. Best Mode selection](#bestmodel)
   * [a. Fine tuning](#tuning)
   * [b. Scores](#scores)
+  * [c. Interpretation](#Interpretation)
 * [5. Submission](#submission)
 	
 ## 0. Modules and versions <a name="modules">
@@ -284,17 +285,17 @@ Accuracy: 86.86%
 F1 score: 0.867740
 | --- | precision | recall | f1-score | support|
 | --- | --- | --- | --- | --- |
-| 0.0 | 0.86 | 0.87 | 0.87 | 1440 |
-| 1.0 | 0.87 | 0.86  | 0.87  | 1437 |
+| 0.0 | 0.86 | 0.88 | 0.87 | 1440 |
+| 1.0 | 0.88 | 0.86  | 0.87  | 1437 |
 | accuracy |  |  | 0.87 | 2877 |
 | macro avg | 0.87 | 0.87 | 0.87 | 2877 |
 | weighted avg | 0.87 | 0.87 | 0.87 | 2877 |
             
-
+### c. Interpretation <a name="Interpretation">
 
 ## 5. Submission  <a name="submission">
 Thank you for taking the time to learn more about the solution we have implemented, we appreciate your feedback. 
-Here is the link to the CSV [file](https://github.com/Amine-OMRI/HR-Analytics/blob/main/Submission/submission.csv) of the submission.
+Here is the link to the CSV [file](https://github.com/Amine-OMRI/HR-Analytics/blob/main/Submission/submission_01.csv) of the submission.
 
 **Note** Please use Googel Colab to open the notebooks and re-run the code to see the result of each cell as there are many code cells and colab will not show them if you open them in Github.
 
