@@ -22,6 +22,7 @@ Data science open position challenge in order to lay the foundation for a techni
   * [a. XGBoost](#XGBoost)
   * [b. Linear SVM](#SVM)
   * [c. CatBoostRegressor](#CatBoostRegressor)
+  * [d. LGBMClassifier](#LGBMClassifier)
 * [4. Best Mode selection](#bestmodel)
   * [a. Fine tuning](#tuning)
   * [b. Scores](#scores)
@@ -115,6 +116,14 @@ C is an hyperparameter that adds a penalty for each misclassified data point. If
 	
    * CatBoostRegressor:
 CatBoost builds upon the theory of decision trees and gradient boosting. The main idea of boosting is to sequentially combine many weak models (a model performing slightly better than random chance) and thus through greedy search create a strong competitive predictive model. Because gradient boosting fits the decision trees sequentially, the fitted trees will learn from the mistakes of former trees and hence reduce the errors. This process of adding a new function to existing ones is continued until the selected loss function is no longer minimized.
+
+   * ## LGBMClassifier
+LightGBM is a gradient boosting framework that uses tree based learning algorithms. It is designed to be distributed and efficient with the following advantages:
+	* Faster training speed and higher efficiency.
+	* Lower memory usage.
+	* Better accuracy.
+	* Support of parallel, distributed, and GPU learning.
+	* Capable of handling large-scale data.
 	
    **Note** we tried them all with unbalanced data and with balanced SMOTE data.
 
@@ -238,6 +247,18 @@ min_child_weight = 6`
 | :-: | :-: | :-: | :-: | :-: | :-: | 
 | app 6 | 86.69% | 0.864998 | 0.86 | 0.88 | 0.85 |
 
+### d. LGBMClassifier <a name="LGBMClassifier">
+
+	LGBMClassifier: imalanced DATA
+| Approach | Accuracy | F1-score | AUC | Precision | Recall |
+| :-: | :-: | :-: | :-: | :-: | :-: | 
+| app 6 | 78.76% | 0.501836 |  0.67 | 0.57 | 0.45 |
+	
+	LGBMClassifier: SMOTE Balanced DATA 
+| Approach | Accuracy | F1-score | AUC | Precision | Recall |
+| :-: | :-: | :-: | :-: | :-: | :-: | 
+| app 6 | 85.82% | 0.854182 | 0.85 | 0.88 | 0.83 |
+	
 ## 4.  Best Mode selection <a name="bestmodel">
 	
 the best model that performed well was XGBoost with the below scores:
