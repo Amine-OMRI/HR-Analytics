@@ -276,9 +276,9 @@ min_child_weight = 6`
 | :-: | :-: | :-: | :-: | :-: | :-: | 
 | app 6 | 85.68% | 0.858419 | 0.85 | 0.87 | 0.86 |
 	
-| SVC | MLP | RF | LR | Stack |
-| :-: | :-: | :-: | :-: | :-: |
-| Accuracy: 82.24% F1 score: 0.825657 AUC score: 0.822405 | Accuracy: 80.85% F1 score: 0.810848 AUC score: 0.808495 | Accuracy: 82.34% F1 score: 0.827093 AUC score: 0.823450 | Accuracy: 75.46% F1 score: 0.749823 AUC score: 0.754586 | Accuracy: 85.68% F1 score: 0.858419 AUC score: 0.856808 |
+| SVC | MLP | RF | LR | KNN | Stack |
+| :-: | :-: | :-: | :-: | :-: | :-: |
+| Accuracy: 82.24% F1 score: 0.825657 AUC score: 0.822405 | Accuracy: 80.85% F1 score: 0.810848 AUC score: 0.808495 | Accuracy: 82.34% F1 score: 0.827093 AUC score: 0.823450 | Accuracy: 75.46% F1 score: 0.749823 AUC score: 0.754586 | Accuracy: 70.14% F1 score:  0.723349 AUC score: 0.701508 | Accuracy: 85.68% F1 score: 0.858419 AUC score: 0.856808 |
 	
 ## 4.  Best Mode selection <a name="bestmodel">
 	
