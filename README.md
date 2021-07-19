@@ -317,7 +317,7 @@ F1 score: 0.868515
 * In addition, we can look at the recall score. At 86%, this means that "When an individual was looking for work, our model accurately classified them 86% of the time." This is also an important metric for the above business situation. In particular, we would want to minimize our False Negatives, aka: when our model inaccurately predicts someone who is looking for work.
 
 All together, we can look at the f1 score of 86% because our business case revolves around maximizing both precision and recall.
-            
+
 ### d. Feature Importance <a name="FeatureImportance">
 	
 In addition to its superior performance, the use of decision tree method sets such as gradient boosting has the advantage of being able to automatically provide estimates of feature importance from a trained predictive model.
@@ -333,6 +333,12 @@ This importance is computed explicitly for each feature in the dataset, allowing
 	
 * As we can see, this assumes that looking for work tends to be a factor of location as well as things related to your current job (university, experience, company type, company size, etc). In addition,people in cities `code_city_21`, `code_city_103`, `code_city_16` are much more likely to be seeking a new job.
 	
+* **city_development_index** : it looks like the city_development_index is impactful when making this prediction. In order to better understand the relationship between city_development_index and the target variable, it is helpful to take a quick look at this plot:
+<p align="center">
+  <img src="https://github.com/Amine-OMRI/HR-Analytics/blob/data_preprocessing/city_development_index%20_by_percentage_looking_for_job.png"/>
+</p>
+As we can see, it seems that the higher the urban development index goes, the less likely people are to seek a job. This makes sense, as a higher urban development index could mean that people are more satisfied with their current location. Note that this assumes that job search tends to be a factor of location as well as things related to what your current job is (type of job, company size, etc.).
+
 ## 5. Submission  <a name="submission">
 Thank you for taking the time to learn more about the solution we have implemented, we appreciate your feedback. 
 Here is the link to the CSV [file](https://github.com/Amine-OMRI/HR-Analytics/blob/main/Submission/submission_01.csv) of the submission.
