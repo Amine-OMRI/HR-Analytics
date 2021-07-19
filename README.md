@@ -127,6 +127,10 @@ LightGBM is a gradient boosting framework that uses tree based learning algorith
 	* Support of parallel, distributed, and GPU learning.
 	* Capable of handling large-scale data.
 	
+   * Stacking
+Stacking is an ensemble learning technique to combine multiple classification models via a meta-classifier. The individual classification models are trained based on the complete training set; then, the meta-classifier is fitted based on the outputs -- meta-features -- of the individual classification models in the ensemble. The meta-classifier can either be trained on the predicted class labels or probabilities from the ensemble.
+In our stacking we are using `Support Vector classifier`, `Multi-layer perceptron`, `Random Forest`, `LogisticRegression` and  `KNNeighbors`.
+	
    **Note** we tried them all with unbalanced data and with balanced SMOTE data.
 
 ### c. Evaluation Metrics  <a name="scoring">
@@ -266,6 +270,31 @@ min_child_weight = 6`
 | Approach | Accuracy | F1-score | AUC | Precision | Recall |
 | :-: | :-: | :-: | :-: | :-: | :-: | 
 | app 6 | 85.82% | 0.854182 | 0.85 | 0.88 | 0.83 |
+	
+	Stacking: SMOTE Balanced DATA 
+| Approach | Accuracy | F1-score | AUC | Precision | Recall |
+| :-: | :-: | :-: | :-: | :-: | :-: | 
+| app 6 | 85.68% | 0.858419 | 0.85 | 0.87 | 0.86 |
+--- SVC ----------------------------
+Accuracy: 82.24%
+F1 score: 0.825657
+AUC score: 0.822405
+--- MLP ----------------------------
+Accuracy: 80.85%
+F1 score: 0.810848
+AUC score: 0.808495
+--- RF ----------------------------
+Accuracy: 82.34%
+F1 score: 0.827093
+AUC score: 0.823450
+--- LR ----------------------------
+Accuracy: 75.46%
+F1 score: 0.749823
+AUC score: 0.754586
+--- Stack ----------------------------
+Accuracy: 85.68%
+F1 score: 0.858419
+AUC score: 0.856808
 	
 ## 4.  Best Mode selection <a name="bestmodel">
 	
