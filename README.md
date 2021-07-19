@@ -23,6 +23,7 @@ Data science open position challenge in order to lay the foundation for a techni
   * [b. Linear SVM](#SVM)
   * [c. CatBoostRegressor](#CatBoostRegressor)
   * [d. LGBMClassifier](#LGBMClassifier)
+  * [e. Stacking](#stacking)
 * [4. Best Mode selection](#bestmodel)
   * [a. Fine tuning](#tuning)
   * [b. Scores](#scores)
@@ -270,7 +271,9 @@ min_child_weight = 6`
 | Approach | Accuracy | F1-score | AUC | Precision | Recall |
 | :-: | :-: | :-: | :-: | :-: | :-: | 
 | app 6 | 85.82% | 0.854182 | 0.85 | 0.88 | 0.83 |
-	
+
+### e. Stacking <a name="stacking">
+
 	Stacking: SMOTE Balanced DATA 
 | Approach | Accuracy | F1-score | AUC | Precision | Recall |
 | :-: | :-: | :-: | :-: | :-: | :-: | 
