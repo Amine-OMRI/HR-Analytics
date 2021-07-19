@@ -275,6 +275,7 @@ min_child_weight = 6`
 | Approach | Accuracy | F1-score | AUC | Precision | Recall |
 | :-: | :-: | :-: | :-: | :-: | :-: | 
 | app 6 | 85.68% | 0.858419 | 0.85 | 0.87 | 0.86 |
+	
 --- SVC ----------------------------
 Accuracy: 82.24%
 F1 score: 0.825657
