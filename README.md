@@ -2,7 +2,7 @@
 
 
 ---
-<p><img alt="https://www.ceratizit.com/" height="120px" src="https://consent.trustarc.com/v2/asset/09:13:49.986pc83s3_CERATIZIT_G_WEB_color_transparent.png" align="left" hspace="10px" vspace="0px"></p>  <h1>HR-Analytics</h1>
+<h1>HR-Analytics</h1>
 Data science open position challenge in order to lay the foundation for a technical discussion during the interview with the condidate 
 
 
