@@ -3,10 +3,6 @@
 
 ---
 <h1>HR-Analytics</h1>
-Data science open position challenge in order to lay the foundation for a technical discussion during the interview with the condidate 
-
-
-
 ---
 
 ## Table of content
